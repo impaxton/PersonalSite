@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    margin: 0;
+    font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #111111;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#information {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Use a percentage width to make it responsive */
+    max-width: 400px; /* Add a maximum width to avoid excessive stretching on large screens */
+    height: 55%;
+    background-color: #1f1f1f;
+    color: black;
+    border-radius: 10px;
+    padding: 20px; /* Add some padding for better spacing */
+    filter: drop-shadow(0.60em 0.60em 0.2em);
+
+}
+
+#name {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    color: white;
+}
+
+#description h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    color: white;
+}
+
+#quote h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+    color: white;
+}
+
+#links img {
+    width: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#discord {
+    margin-top: 3.5px;
+}
+
+#links {
+    display: flex; /* Use flexbox for better alignment on different devices */
+    justify-content: center; /* Center the links horizontally */
+    margin-top: 15px; /* Add some space at the top */
+}
+
+/* Media Query for smaller devices */
+@media screen and (max-width: 768px) {
+    #information {
+        width: 95%; /* Adjust the width for smaller screens */
+    }
+
+    #links {
+        margin-top: 10px; /* Reduce the margin on smaller screens */
+    }
+}
