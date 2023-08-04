@@ -1,32 +1,144 @@
+<!--- if your going to skid my code, please give me credit -tristan ---->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <link rel="stylesheet" href="style.css"/>
+    <meta name="description" content="Click to view tristan's bio" />
+    <meta name="theme-color" content="black">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/141422191?v=4" type="image/gif" sizes="100x100">
     <title>@impaxton</title>
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/141422191?s=400&u=8e66e27bd805399bb8ac284caf42da60d3279964&v=4" type="image/gif" sizes="100x100">
-    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        button:hover {
+            text-decoration: none;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .visible {
+            display: block;
+        }
+
+        .glow-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: white;
+            animation: glow 2s infinite linear;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 5px white;
+            }
+            50% {
+                box-shadow: 0 0 20px white, 0 0 20px white, 0 0 20px white;
+            }
+            100% {
+                box-shadow: 0 0 5px white;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div id="particles-js">
-        <div id="information">
-            <div id="name">
-                <br>
-                <center><img style="width: 40%;     border-radius: 25px;                    "src="https://avatars.githubusercontent.com/u/141422191?s=400&u=8e66e27bd805399bb8ac284caf42da60d3279964&v=4"></center>
-                <center><h1>@impaxton</h1></center>
+    <button id="enterButton" class="hidden">Click to Enter</button>
+
+    <audio id="audioPlayer" src="other audio.mp3" loop></audio>
+
+    <div id="mainContent" class="hidden">
+        <div class="center">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="snow.js"></script>
+        <style>
+            .social-icons {
+                color: #e4e9ff;
+            }   
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <div class="container blur">
+                <img class="pfp-image" src="https://avatars.githubusercontent.com/u/141422191?v=4" alt="pfp" />
+                <p class="username">@impaxton</p>
+                <p class="bio-text">Hello! My name is Paxton, and I'm a fullstack developer!<br> I have knowledge across HTML, JS, Python, Java, C++, and more. <br> Additionally, I own a highly advaned web-proxy named Abyss, <br>you can join using the discord button below!</p>
+                <div class="socials">
+                    <a target="_blank" href="https://discord.gg/goabyss"><i class="fa-brands fa-discord social-icons"></i></a>
+                    <a target="_blank" href="https://open.spotify.com/user/paxtonwarin?si=9635899642904cc3"><i class="fa-brands fa-spotify social-icons"></i></a>
+                    <a target="_blank" href="https://github.com/impaxton"><i class="fa-brands fa-github social-icons"></i></a>
+                    <a target="_blank" href="https://tiktok.com/@useabyss"><i class="fa-brands fa-tiktok social-icons"></i></a>
+                </div>
             </div>
-            <div id="quote">
-                <center><h1><em>"I'm just a kid, I don't know anything."</em></h1></center>
-            </div>
-            <div id="description">
-                <center><h4>I code in numerous languages and use multiple frameworks. Some key languages are HTML5/CSS, JavaScript, Java, Python, C++, C, and C#. I also own Abyss Services, LLC, which is a highly advanced web-proxy.</h2></center>
-            </div>
-            <div id="links">
-                <a href="https://github.com/impaxton"><img src="assets/github.svg"></a>
-                <a href="https://discord.gg/goabyss"><img id="discord" src="assets/discord.svg"></a>
-                <a href="https://open.spotify.com/user/paxtonwarin?si=0cb174b535984b07"><img src="assets/spotify.svg"></a>
-            </div>
-        </div> 
+        </div>
+      <div class="glow-line"></div>
+    </body>
+</html>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var enterButton = document.getElementById('enterButton');
+            var mainContent = document.getElementById('mainContent');
+            var audioPlayer = document.getElementById('audioPlayer');
+            
+            enterButton.addEventListener('click', function () {
+                audioPlayer.play(); 
+                mainContent.classList.add('visible');
+                enterButton.classList.remove('visible');
+            });
+            
+            setTimeout(function () {
+                enterButton.classList.add('visible');
+                enterButton.style.animation = 'fade-in 1s ease-in';
+            }, 1000);
+        });
+    </script>
+    
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </body>
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
-<script src="particles.js"></script>
 </html>
