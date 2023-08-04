@@ -1,1 +1,1 @@
-# Made with vanilla HTML
+# Made with vanilla HTML.
